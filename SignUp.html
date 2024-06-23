@@ -1,38 +1,27 @@
 <html>
 	<head>
-		<title>Forget Password</title>
+		<title>Sign up</title>
 			<meta charset="utf-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 			<style>
-				body
-					{
-					background-color:Bisque;
-					}
-				h2
-					{
-					Font-family:Times New Roman;
-					text-align:center;
-					font-weight:bold;
+			body
+			{
+				background-color:linen;
+				
 					
-					}
-				h5
-					{
-					Font-family:Times New Roman;
-					text-align:center;
-					
-					}
-				form
-					{				
-					
-					font-size:18px;
-					word-spacing:20px;
-					line-height:2em;
-					text-align:center;
-					}
-				.bottom
+			}
+			
+			h2
+			{
+				font-family:Times New Town;
+				font-weight:bold;
+				line-height:2em;
+				text-align:center;
+			}
+			.bottom
 					{
 					background-color:purple;
 					font-family:serif;
@@ -41,6 +30,7 @@
 					color:white;
 					padding:20px;
 					}
+				
 			</style>
 	</head>
 	<body>
@@ -67,54 +57,34 @@
 		</nav>
 		<br><br>
 		
-	
 		<div class="row">
-			<div class="container">
+			<div class="container">	
 				<div class="col-sm-12">
-					<h2> Forgot Password ?</h2><br>
-							<script>
-									function validateform()
-										{
-											const email=document.f2.email.value;
-											if(email.match(/^([a-zA-Z0-9]+)@([a-z]+)([\.])([a-z]{2,5})$/))
-											{
-												return true;
-											}
-											else
-											{
-												alert("Enter Valid Mail-ID!!");
-												return false;
-											}
-										}
-										
-			
-									function validateform()
-										{
-											var firstpassword=document.f1.password.value;
-											var secondpassword=document.f1.password2.value;
-											
-											if(firstpassword==secondpassword)
-											{
-											return true;
-											}
-											else
-											{
-											alert("password must be same!");
-											return false;
-											}
-										}
-							</script>
+					<h2> Register</H2>
+					<form>
+						<div class="form-group">
 							
-							<form name="f2" action="Login.html" onsubmit="return validateform()">
-								<h5> Enter your mail ID</h5>
-								<input type="text" name="email"/>
-							</form>
-							<br><br><br>
-							<form name="f1" action="ForgetPassword.html"onsubmit="return validateform()">
-							<input type="password"placeholder="Enter Password"name="password"/><br><br>
-							<input type="password"placeholder="Re-Enter Password"name="password2"/><br><br>
-							<input type="submit" value="Reset"><br><br>
-						</form>	
+							<input type="text" class="form-control"placeholder="Enter FullName" name="person_name">
+						</div>
+						<div class="form-group">
+							
+							<input type="text" class="form-control"placeholder="Enter Home address" name="Address">
+						</div>
+						<div class="form-group">
+							
+							<input type="email" class="form-control"id="email"placeholder="Enter Email" name="email">
+						</div>
+						<div class="form-group">
+							
+							<input type="number" class="form-control"placeholder="Enter Mobile Number" name="PhoneNo">
+						</div>
+						
+						<center>
+							<button type="submit" class="btn btn-default">Create Account</button><br><br>
+						
+							Already have an account?<a href="E:\FRONT_END\PROJECT\boutique\Coding\ContactUs\Login.html">Login</a>
+						</center>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -164,4 +134,6 @@
 		</div>
 	</body>
 </html>
-			
+		
+		
+		

@@ -1,38 +1,28 @@
 <html>
 	<head>
-		<title>Forget Password</title>
+		<title>Login</title>
 			<meta charset="utf-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 			<style>
-				body
+					body
 					{
-					background-color:Bisque;
+						background-color:Bisque;
 					}
-				h2
+					form
 					{
-					Font-family:Times New Roman;
-					text-align:center;
-					font-weight:bold;
-					
+						font-size:18px;
+						word-spacing:20px;
+						line-height:2em;
 					}
-				h5
+					h2
 					{
-					Font-family:Times New Roman;
-					text-align:center;
-					
+						font-family:Times New Roman;
+						font-weight:bold;
 					}
-				form
-					{				
-					
-					font-size:18px;
-					word-spacing:20px;
-					line-height:2em;
-					text-align:center;
-					}
-				.bottom
+					.bottom
 					{
 					background-color:purple;
 					font-family:serif;
@@ -69,55 +59,56 @@
 		
 	
 		<div class="row">
+			<center>
 			<div class="container">
-				<div class="col-sm-12">
-					<h2> Forgot Password ?</h2><br>
-							<script>
-									function validateform()
+				<div class="col-md-12">
+					<h2> Login </h2><br>
+						
+						<script>	
+								function validateform()
+									{
+										const name=document.myform.id.value;
+										const password=document.myform.password.value;
+										if(name=="")
 										{
-											const email=document.f2.email.value;
-											if(email.match(/^([a-zA-Z0-9]+)@([a-z]+)([\.])([a-z]{2,5})$/))
-											{
-												return true;
-											}
-											else
-											{
-												alert("Enter Valid Mail-ID!!");
-												return false;
-											}
-										}
-										
-			
-									function validateform()
-										{
-											var firstpassword=document.f1.password.value;
-											var secondpassword=document.f1.password2.value;
-											
-											if(firstpassword==secondpassword)
-											{
-											return true;
-											}
-											else
-											{
-											alert("password must be same!");
+											alert("Name can't be blank");
 											return false;
-											}
 										}
+										else if(password.length<6)
+										{
+											alert("password must be at least 6 characters long.");
+											return false;
+										}
+										else
+										{
+											alert("welcome  "+name+"!!!!");
+											return true;
+										}
+									}
+				
 							</script>
+						<form name="myform" action="JSfindES6.html" onsubmit="return validateform()">
+								<div class="form-group">
+									<input type="text" placeholder="Enter FullName" name="id">
+								</div>
+								<div class="form-group">
+								
+										<input type="password" placeholder="Enter Password" name="password">
+									
+								</div>
 							
-							<form name="f2" action="Login.html" onsubmit="return validateform()">
-								<h5> Enter your mail ID</h5>
-								<input type="text" name="email"/>
-							</form>
-							<br><br><br>
-							<form name="f1" action="ForgetPassword.html"onsubmit="return validateform()">
-							<input type="password"placeholder="Enter Password"name="password"/><br><br>
-							<input type="password"placeholder="Re-Enter Password"name="password2"/><br><br>
-							<input type="submit" value="Reset"><br><br>
-						</form>	
+							<div class="form-group">
+								<div class="checkbox">
+									<label><input type="checkbox" name="remember">Remember</label>
+								</div>
+							</div>
+							<input type="submit" value="Register"><br><br>
+							<a href="E:\FRONT_END\PROJECT\boutique\Coding\ContactUs\ForgetPassword.html">ForgetPassword?</a>
+					</center>
 				</div>
 			</div>
 		</div>
+		</form>
 		
 		<br><br>
 		<div class="bottom">
@@ -164,4 +155,3 @@
 		</div>
 	</body>
 </html>
-			
